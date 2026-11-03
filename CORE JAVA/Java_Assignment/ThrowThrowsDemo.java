@@ -1,0 +1,19 @@
+// Question 4
+public class ThrowThrowsDemo {
+
+    static void checkAge(int age) throws IllegalArgumentException {
+        if (age < 18) {
+            throw new IllegalArgumentException("Access denied: You must be at least 18 years old.");
+        } else {
+            System.out.println("Access granted: You are old enough.");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(15);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Exception caught in main: " + e.getMessage());
+        }
+    }
+}
